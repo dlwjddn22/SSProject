@@ -26,12 +26,12 @@ public class FixController {
     @RequestMapping(value = "/api/002000000/insert", method = RequestMethod.POST)
     public void api002000000insert(@Valid FixInfo vo, BindingResult result) {
     	
-    	String newF_SEQ = fixService.createFixNo();    	
+    	String newF_SEQ = fixService.createFixNo();
     	System.out.println(vo.getF_SEQ());
-   		vo.setF_SEQ(newF_SEQ);    	
+   		vo.setF_SEQ(newF_SEQ);
     	System.out.println(vo.getF_SEQ());
     	System.out.println(vo);
-    	fixService.insert(vo);		    	
+    	fixService.insert(vo);
     }	
 
     @RequestMapping(value = "/api/002000000/update", method = RequestMethod.POST)
@@ -53,6 +53,11 @@ public class FixController {
     public Page<FixInfo> api002000000page(PagingPram pagingPram, HttpServletRequest request) {
     	pagingPram.setCondition(request);
     	return fixService.getPage(pagingPram);
+    }
+    
+    @ResponseBody
+    @RequestMapping(value = "/api/002000001/page", method = RequestMethod.GET)
+    public void api002000001page(PagingPram pagingPram, HttpServletRequest request) {
     }
     
     @ResponseBody

@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ include file="../../inc/common.jsp"%>
+
+
+
+
 <!-- page.contents -->
 <div>
 	<div class="page-content">
@@ -119,8 +123,18 @@
 					</div>
 				</div>
 			</form>
+			
+			
+	
+    <div id="grid" style="width:800px; height:500px;"></div>
+			
 		</div>
 	</div>
+	
 	<!-- modal end -->
 </div>
 <!-- page.contents -->
+
+
+
+ 

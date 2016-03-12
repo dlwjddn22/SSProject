@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.service.EmpService;
 import com.service.MainService;
 
 @Controller
@@ -38,9 +37,6 @@ public class MainController {
     @ResponseBody
     @RequestMapping(value = "/com/api/selectizeOptions", method = RequestMethod.GET)
     public List<Map<String, String>> getOptions(@RequestParam("cdTp") String cdTp) {
-    	
-    	List<Map<String, String>> ls = mainService.getOptions(cdTp);
-    	
-    	return ls;
+    	return mainService.getOptions(cdTp);
     }
 }
